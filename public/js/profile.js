@@ -21,18 +21,22 @@ const newFormHandler = async (event) => {
   }
 };
 
-const delButtonHandler = async (event) => {
+const buttonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
 
-    const response = await fetch(`/api/posts/${id}`, {
-      method: 'DELETE',
-    });
+    if (event.target.getAttribute('id') === 'delButton') {
+      const response = await fetch(`/api/posts/${id}`, {
+        method: 'DELETE',
+      });
 
-    if (response.ok) {
-      document.location.replace('/profile');
-    } else {
-      alert('Failed to delete post');
+      if (response.ok) {
+        document.location.replace('/profile');
+      } else {
+        alert('Failed to delete post');
+      }
+    } else if (event.target.getAttribute('id') === 'editButton') {
+      document.location.replace(`/posts/${id}`);
     }
   }
 };
@@ -41,6 +45,4 @@ document
   .querySelector('.new-post-form')
   .addEventListener('submit', newFormHandler);
 
-document
-  .querySelector('.post-list')
-  .addEventListener('click', delButtonHandler);
+document.querySelector('.post-list').addEventListener('click', buttonHandler);

@@ -6,7 +6,7 @@
 
 <div class='row mt-4'>
   <div class='col-md-6'>
-    <h3>Create a New Project:</h3>
+    <h3>Create a new blog post:</h3>
 
     <form class='form new-post-form'>
       <div class='form-group'>
@@ -23,11 +23,12 @@
         <textarea class='form-input' id='post-desc' name='post-desc'></textarea>
       </div>
       <div class='form-group'>
-        <button type='submit' class='btn btn-primary'>Create</button>
+        <button type='submit' class='btn btn-primary'>Post It!</button>
       </div>
     </form>
   </div>
 
+  {{! add edit button, put route }}
   {{#if posts.length}}
     <div class='col-md-6 post-list'>
       <h3>Your Posts:</h3>
@@ -37,8 +38,16 @@
           <div class='col-md-8'>
             <h4><a href='/posts/{{post.id}}'>{{post.title}}</a></h4>
           </div>
-          <div class='col-md-4'>
+          <div class='col-md-2'>
             <button
+              id='editButton'
+              class='btn btn-sm btn-info'
+              data-id='{{post.id}}'
+            >EDIT</button>
+          </div>
+          <div class='col-md-2'>
+            <button
+              id='delButton'
               class='btn btn-sm btn-danger'
               data-id='{{post.id}}'
             >DELETE</button>
