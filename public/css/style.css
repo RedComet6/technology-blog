@@ -3,6 +3,16 @@ header,
   border-bottom: 1px solid #ccc;
 }
 
+.border-bottom {
+  border-style: inset;
+}
+
+.dollar-amount {
+  color: #056605;
+  font-weight: bold;
+  margin-left: -5px;
+}
+
 .no-button {
   background: none;
   border: none;
@@ -16,10 +26,4 @@ header,
 .no-button:hover {
   color: #065b83;
   text-decoration: underline;
-}
-
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
 }
