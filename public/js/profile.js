@@ -36,7 +36,7 @@ const buttonHandler = async (event) => {
         alert('Failed to delete post');
       }
     } else if (event.target.getAttribute('id') === 'editButton') {
-      document.location.replace(`/posts/${id}`);
+      document.location.replace(`/update/${id}`);
     }
   }
 };
