@@ -2,15 +2,19 @@
   <h2>{{title}}</h2>
   <p>{{description}}</p>
   <p>Created by {{user.name}} on {{format_date date_created}}</p>
-  {{! make this add comment }}
+  <h3>Comments:</h3>
+  {{#each comments as |comment|}}
+    <p>{{comment.message}}
+      <span class='text-info'>
+        Submitted by
+        {{comment.user.name}}
+        on
+        {{format_date comment.date_created}}</span></p>
+  {{/each}}
   <p>
     <button class='btn btn-primary'>Leave a comment</button>
   </p>
 </div>
-
-{{#each post.comments as |comment|}}
-  <div>{{comment.message}}</div>
-{{/each}}
 
 {{! add form to create new comments here, remove comments from homepage }}
 
