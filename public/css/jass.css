@@ -916,6 +916,10 @@ a:hover {
   color: #1b89bc !important;
 }
 
+.text-post {
+  color: seagreen;
+}
+
 /* BACKGROUND UTILS */
 .bg-primary {
   background-color: #2d3e50 !important;
@@ -951,6 +955,10 @@ a:hover {
 
 .bg-sand {
   background-color: lemonchiffon;
+}
+
+.bg-dorange {
+  background-color: darkorange;
 }
 
 /* DISPLAY */
