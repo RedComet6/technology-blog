@@ -7,7 +7,7 @@
 <div class='row mt-4'>
   <div class='col-md-6'>
     <h3 class='text-link'>Create a new blog post:</h3>
-
+    {{! form for submitting new post }}
     <form class='form new-post-form'>
       <div class='form-group'>
         <label for='post-title' class='text-link'>Post Title:</label>
@@ -27,12 +27,11 @@
       </div>
     </form>
   </div>
-
-  {{! add edit button, put route }}
+  {{! if the user has made existing posts, loop through them to display each with buttons to handle edit or delete }}
   {{#if posts.length}}
     <div class='col-md-6 post-list'>
       <h3 class='text-link'>Your Posts:</h3>
-
+      {{! loop through each exsiting user post and display }}
       {{#each posts as |post|}}
         <div class='row mb-2'>
           <div class='col-md-8'>
@@ -42,6 +41,7 @@
               >{{post.title}}</a></h4>
           </div>
           <div class='col-md-2'>
+            {{! edit button for updating an existing post }}
             <button
               id='editButton'
               class='btn btn-sm btn-info'
@@ -49,6 +49,7 @@
             >EDIT</button>
           </div>
           <div class='col-md-2'>
+            {{! delete button for removing a post permanently }}
             <button
               id='delButton'
               class='btn btn-sm btn-danger'

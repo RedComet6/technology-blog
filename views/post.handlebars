@@ -6,6 +6,7 @@
     on
     {{format_date date_created}}</p>
   <h3 class='pt-5 text-link'>Comments:</h3>
+  {{! loop through all comments to display each }}
   {{#each comments as |comment|}}
     <p class='border-bottom'>{{comment.message}}
       <span class='text-info'>
@@ -15,6 +16,7 @@
         {{format_date comment.date_created}}</span>
     </p>
   {{/each}}
+  {{! conditionally render form for adding new comment if the user is logged in }}
   {{#if logged_in}}
     <form class='form new-comment-form' data-id='{{id}}'>
       <div class='form-group'>
