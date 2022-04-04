@@ -38,7 +38,7 @@ If you wish to contribute to my content, please contact me at asunshine99@gmail.
 
 ## Links to Application
 
--   Here is the heroku: [https://redcomet6.github.io/back-end-Ecommerce/](https://redcomet6.github.io/back-end-Ecommerce/)
+-   Here is the heroku: [https://chamberlain-blog-site.herokuapp.com/](https://chamberlain-blog-site.herokuapp.com/)
 -   Here is the repo: [https://github.com/RedComet6/technology-blog](https://github.com/RedComet6/technology-blog)
 
 ## Questions
